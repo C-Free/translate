@@ -49,22 +49,11 @@ bool Them(TuDien y){
 	
 	if(KiemTraChuoi(y.TiengAnh)==false){
 		int i=HF(LayChuoiDau(y.TiengAnh));
-			//if(EmptyBucket(i)==1){
-				//bucket[i]->x=y;
-				//bucket[i]->link=NULL;
-			//	return true;	
-			//}else{
 				PhanTu *p=(PhanTu *)malloc(sizeof(PhanTu));//cap phat
 				p->x=y;
 				p->link=bucket[i];
 				bucket[i]=p;	
 				return true;
-			
-		//	PhanTu *p;
-		//p=bucket[i];
-		//p->link=bucket[i];
-		//p->x=y;
-		//bucket[i]=p;
 		return true;
 	}else{
 		//tra ve false neu co trong bang bam
@@ -97,8 +86,5 @@ int main(int argc, char *argv[]){
 		}else{
 			printf("trung\n");
 		};
-		
-	}
-
-	
+	}	
 }
